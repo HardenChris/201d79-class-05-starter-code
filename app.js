@@ -61,7 +61,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  let total = sum(sum(a,b)[0],c)[0];
+  console.log(total,'Word');
+  let total2 = multiply(multiply(a,b)[0],c)[0];
+
+  let result = a + ' and ' + b + ' and ' + c + ' sum to ' + total + '.';
+  let result2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + total2 + '.';
+  console.log (result, 'result')
+  console.log (result2, 'result2')
+  //console.log (result); (result2);
+  return [total, total2, result, result2]
+
 }
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
